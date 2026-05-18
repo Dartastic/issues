@@ -1,0 +1,39 @@
+title: "[Q&A] "
+labels: ["q-a"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For "how do I..." or "why does..." questions. Bugs go in
+        [Issues](../../issues/new/choose) instead — Q&A is for
+        things that aren't broken, you just want to know how to
+        do them.
+
+  - type: textarea
+    id: what-trying
+    attributes:
+      label: What are you trying to do?
+      description: Describe the goal, not just the symptom.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-tried
+    attributes:
+      label: What have you tried so far?
+      description: Helps us skip suggestions you've already ruled out.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part of Dartastic?
+      options:
+        - dartastic_opentelemetry (OSS SDK)
+        - dartastic_opentelemetry_pro / pro_native_flutter
+        - Pub registry
+        - Symbolizer
+        - Hosted observability
+        - Dashboards
+        - General architecture / not a specific package
+    validations:
+      required: true

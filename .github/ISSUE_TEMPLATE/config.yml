@@ -1,0 +1,29 @@
+# Disable the free-form "Open a blank issue" link so every issue
+# flows through one of the structured templates. Keeps signal
+# high + spam low.
+blank_issues_enabled: false
+
+# External contact links shown on the "Choose a template" page.
+# Anything that ISN'T an issue (licensing, security, general
+# questions) gets directed to the right channel before someone
+# files a misrouted issue.
+contact_links:
+  - name: License, billing, or subscription question
+    url: mailto:support@dartastic.io
+    about: Anything involving your account, your plan, or your invoice — please email us directly so we can pull up your record.
+
+  - name: Security disclosure
+    url: mailto:security@dartastic.io
+    about: Please report security issues privately, not as a public issue.
+
+  - name: How-do-I question
+    url: https://github.com/Dartastic/issues/discussions/new?category=q-a
+    about: For usage questions ("how do I instrument X?", "why doesn't Y work?"), please use Discussions — they're searchable and often answered by other users.
+
+  - name: Show what you built
+    url: https://github.com/Dartastic/issues/discussions/new?category=show-and-tell
+    about: We love seeing apps shipping with Dartastic. Drop a screenshot or a link.
+
+  - name: Dartastic homepage
+    url: https://dartastic.io
+    about: Pricing, product detail, and how to start a trial.

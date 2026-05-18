@@ -1,0 +1,100 @@
+name: Bug report
+description: Something is broken or behaving unexpectedly in a Dartastic package, the engine, or hosted observability.
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a clear bug report.
+        The more reproducible the steps, the faster we can fix it.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part of Dartastic?
+      description: Pick the closest match. If it spans more than one, pick the most user-visible.
+      options:
+        - dartastic_opentelemetry (the OSS Dart/Flutter SDK)
+        - dartastic_opentelemetry_pro (the Pro trampoline)
+        - dartastic_opentelemetry_pro_native_flutter (Pro Flutter plugin / engine)
+        - Pub registry (pub.dartastic.io)
+        - Symbolizer (symbolizer.dartastic.io)
+        - Hosted observability (your dedicated box)
+        - Dashboards / Grafana panels
+        - Website (dartastic.io)
+        - Something else (describe in details)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Package version (or commit / build ID)
+      description: Run `flutter pub deps` if you're not sure. For Hosted, include your box version from the dashboard.
+      placeholder: "dartastic_opentelemetry_pro_native_flutter 0.1.0-beta.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform(s)
+      multiple: true
+      options:
+        - Android
+        - iOS
+        - macOS
+        - Linux
+        - Windows
+        - Web (dart2js)
+        - Web (dart2wasm)
+        - Dart server (VM)
+        - Not platform-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see? What did you expect to see?
+      placeholder: |
+        Steps:
+          1. ...
+          2. ...
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: A code snippet, gist, or sample repo that lets us reproduce. The smaller the better — pin Dart/Flutter versions if relevant.
+      render: dart
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs, stack traces, or screenshots
+      description: Drop them here. Long stacks/logs go in a code block or attached file.
+      render: shell
+
+  - type: input
+    id: trace-id
+    attributes:
+      label: Trace ID (if applicable)
+      description: If this involves a span you can see in Tempo / your OTLP backend, the trace ID lets us see exactly what happened.
+      placeholder: "6badaad63d38c440431a683bdabc16e0"
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues and didn't find this one
+          required: true
+        - label: I've removed any secrets / API keys / customer data from this report
+          required: true

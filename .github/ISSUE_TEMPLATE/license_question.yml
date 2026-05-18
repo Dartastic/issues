@@ -1,0 +1,47 @@
+name: License, quota, or access question (public)
+description: For PUBLIC questions about the licensing model. Anything tied to your account or billing → email support@dartastic.io instead.
+title: "[License] "
+labels: ["license", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Read first.** If your question involves:
+          - your specific subscription, plan, or invoice
+          - your customer ID, slug, or API key
+          - usage data tied to your account
+
+        please email [support@dartastic.io](mailto:support@dartastic.io)
+        instead. This template is for **public** questions about
+        how the licensing model works (e.g. "can I use Pro in an
+        open-source project?", "what counts as one app for
+        per-Build licensing?").
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Which tier is the question about?
+      multiple: true
+      options:
+        - Free / OSS
+        - Dev
+        - Pro
+        - Hosted
+        - Comparing across tiers
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Privacy check
+      options:
+        - label: This question contains no account-specific information (customer ID, key, slug, invoice number, usage data). If it does, I'll email support@dartastic.io instead.
+          required: true

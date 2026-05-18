@@ -1,0 +1,62 @@
+name: Feature request
+description: A new capability, an enhancement, or a missing integration you'd find valuable.
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests get prioritized by clarity of the problem
+        they solve, not just by how many votes they get. The
+        clearer the "what would change for me if you shipped
+        this," the better.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What do you have to do today that you wish you didn't? Or what can't you do at all?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would the solution look like to you?
+      description: Doesn't have to be a finished design — even a rough sketch of "I'd like to call X.foo() and get Y back" helps.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which part of Dartastic does this touch?
+      options:
+        - dartastic_opentelemetry (OSS SDK)
+        - dartastic_opentelemetry_pro (Pro trampoline)
+        - dartastic_opentelemetry_pro_native_flutter (Pro engine / Flutter plugin)
+        - Pub registry
+        - Symbolizer
+        - Hosted observability
+        - Dashboards
+        - Website / docs
+        - New product area entirely
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds or alternatives you've tried
+      description: Helps us see how much pain there is + whether this is a real gap.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Is this a blocker?
+      options:
+        - "No — would be nice to have"
+        - "Yes — I have a workaround but it's costing me real time"
+        - "Yes — I can't ship without this"
+    validations:
+      required: true

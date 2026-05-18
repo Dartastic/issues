@@ -1,0 +1,28 @@
+title: "[Show & Tell] "
+labels: ["show-and-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Show us what you built! Screenshots, video, links to live
+        apps or App-Store listings, the dashboard panel you're
+        proud of, the bug you finally caught with jank attribution
+        — all welcome.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you build / find / ship?
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link (App Store, website, blog post, anything)
+
+  - type: textarea
+    id: how-dartastic-helped
+    attributes:
+      label: Where did Dartastic fit in?
+      description: Optional — but if you spotted something with a particular feature (jank attribution, the symbolizer, persistent crash queue), we'd love to know which one.
