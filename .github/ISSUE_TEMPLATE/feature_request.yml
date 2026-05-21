@@ -34,8 +34,8 @@ body:
       options:
         - Dartastic Native Runtime
         - Dartastic Hosted
-        - Dartastic Pub (pub.dartastic.io)
-        - Dartastic Symbolizer (symbolizer.dartastic.io)
+        - Dartastic Pub
+        - Dartastic Symbolizer
         - Website (dartastic.io)
         - Documentation
         - Help
