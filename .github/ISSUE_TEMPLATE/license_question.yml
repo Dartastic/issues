@@ -30,9 +30,10 @@ body:
       label: Which tier is the question about?
       multiple: true
       options:
-        - Free / OSS
+        - Free
         - Dev
         - Pro
+        - Enterprise
         - Hosted
         - Comparing across tiers
     validations:

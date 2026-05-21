@@ -15,14 +15,13 @@ body:
       label: Which part of Dartastic?
       description: Pick the closest match. If it spans more than one, pick the most user-visible.
       options:
-        - dartastic_opentelemetry (the OSS Dart/Flutter SDK)
-        - dartastic_opentelemetry_pro (the Pro trampoline)
-        - dartastic_opentelemetry_pro_native_flutter (Pro Flutter plugin / engine)
-        - Pub registry (pub.dartastic.io)
-        - Symbolizer (symbolizer.dartastic.io)
-        - Hosted observability (your dedicated box)
-        - Dashboards / Grafana panels
+        - Dartastic Native Runtime
+        - Dartastic Hosted
+        - Dartastic Pub (pub.dartastic.io)
+        - Dartastic Symbolizer (symbolizer.dartastic.io)
         - Website (dartastic.io)
+        - Documentation
+        - Help
         - Something else (describe in details)
     validations:
       required: true

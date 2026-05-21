@@ -32,15 +32,14 @@ body:
     attributes:
       label: Which part of Dartastic does this touch?
       options:
-        - dartastic_opentelemetry (OSS SDK)
-        - dartastic_opentelemetry_pro (Pro trampoline)
-        - dartastic_opentelemetry_pro_native_flutter (Pro engine / Flutter plugin)
-        - Pub registry
-        - Symbolizer
-        - Hosted observability
-        - Dashboards
-        - Website / docs
-        - New product area entirely
+        - Dartastic Native Runtime
+        - Dartastic Hosted
+        - Dartastic Pub (pub.dartastic.io)
+        - Dartastic Symbolizer (symbolizer.dartastic.io)
+        - Website (dartastic.io)
+        - Documentation
+        - Help
+        - Something else (describe above)
     validations:
       required: true
 
