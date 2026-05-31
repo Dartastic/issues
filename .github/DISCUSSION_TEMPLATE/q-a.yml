@@ -29,7 +29,7 @@ body:
       label: Which part of Dartastic?
       options:
         - dartastic_opentelemetry (OSS SDK)
-        - dartastic_opentelemetry_pro / pro_native_flutter
+        - dartastic_opentelemetry_native / pro_native_flutter
         - Pub registry
         - Symbolizer
         - Hosted observability

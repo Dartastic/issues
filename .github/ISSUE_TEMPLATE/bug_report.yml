@@ -31,7 +31,7 @@ body:
     attributes:
       label: Package version (or commit / build ID)
       description: Run `flutter pub deps` if you're not sure. For Hosted, include your box version from the dashboard.
-      placeholder: "dartastic_opentelemetry_pro_native_flutter 0.1.0-beta.4"
+      placeholder: "dartastic_opentelemetry_native_flutter 0.1.0-beta.4"
     validations:
       required: true
 
